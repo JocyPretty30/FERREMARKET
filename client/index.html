@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ferremarket | Ferretería Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <nav>
+      <h2>Ferremarket</h2>
+      <div>
+        <a href="#productos">Productos</a>
+        <a href="#carrito">Carrito</a>
+        <a href="#analitica">Más vendidos</a>
+        <a href="#confianza">Confianza</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <h1>Todo para tu proyecto, en un solo lugar</h1>
+      <p>Herramientas, electricidad, tornillería y materiales de ferretería con entrega rápida en Querétaro y fuera del estado.</p>
+      <a class="btn" href="#productos">Comprar ahora</a>
+    </section>
+  </header>
+
+  <main>
+
+    <section class="stats">
+      <div>
+        <h3 id="totalProductos">0</h3>
+        <p>Productos activos</p>
+      </div>
+      <div>
+        <h3 id="totalOrdenes">0</h3>
+        <p>Compras procesadas</p>
+      </div>
+      <div>
+        <h3 id="totalPagos">0</h3>
+        <p>Pagos registrados</p>
+      </div>
+      <div>
+        <h3 id="ventasTotales">$0.00</h3>
+        <p>Ventas acumuladas</p>
+      </div>
+    </section>
+
+    <section class="categorias">
+      <h2>Categorías destacadas</h2>
+      <div class="categoria-grid">
+        <button class="categoria-btn" data-categoria="todas">🛒 Todos</button>
+        <button class="categoria-btn" data-categoria="Herramientas">🔨 Herramientas</button>
+        <button class="categoria-btn" data-categoria="Tornilleria">🔩 Tornillería</button>
+        <button class="categoria-btn" data-categoria="Electricidad">⚡ Electricidad</button>
+      </div>
+    </section>
+
+    <section id="productos">
+      <h2>Productos disponibles</h2>
+      <p class="subtitulo">Busca por nombre, marca o descripción y agrega productos al carrito.</p>
+
+      <input
+        type="text"
+        id="buscador"
+        class="buscador"
+        placeholder="Buscar producto, marca o descripción..."
+      >
+
+      <div id="listaProductos" class="productos-grid"></div>
+    </section>
+
+    <section id="carrito" class="carrito">
+      <div class="carrito-header">
+        <div>
+          <h2>Carrito de compras</h2>
+          <p>Agrega productos y completa tus datos para procesar la compra.</p>
+        </div>
+      </div>
+
+      <div id="itemsCarrito"></div>
+
+      <div class="checkout">
+        <h3>Datos de envío</h3>
+
+        <div class="form-grid">
+          <input id="clienteNombre" type="text" placeholder="Nombre del cliente">
+          <input id="clienteTelefono" type="text" placeholder="Teléfono">
+          <select id="estadoEnvio">
+            <option value="">Selecciona zona de envío</option>
+            <option value="Querétaro">Dentro de Querétaro - entrega rápida</option>
+            <option value="Fuera de Querétaro">Fuera de Querétaro - envío nacional</option>
+          </select>
+          <input id="direccionEnvio" type="text" placeholder="Dirección de entrega">
+        </div>
+
+        <div class="carrito-total">
+          <h3>Total: <span id="totalCarrito">$0.00</span></h3>
+          <button id="vaciarCarrito" class="btn-secundario">Vaciar carrito</button>
+          <button id="comprarBtn" class="btn-comprar">Comprar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="analitica" class="analitica">
+      <div class="panel">
+        <h2>Productos más vendidos</h2>
+        <p>Ranking generado con datos reales de ventas.</p>
+        <div id="rankingProductos"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Clientes frecuentes</h2>
+        <p>Clientes destacados por compras acumuladas.</p>
+        <div id="clientesVIP"></div>
+      </div>
+    </section>
+
+    <section id="confianza" class="confianza">
+      <div>
+        <h3>+10,000</h3>
+        <p>compras procesadas</p>
+      </div>
+      <div>
+        <h3>Querétaro</h3>
+        <p>entrega local disponible</p>
+      </div>
+      <div>
+        <h3>Nacional</h3>
+        <p>envíos fuera del estado</p>
+      </div>
+      <div>
+        <h3>Stock</h3>
+        <p>controlado automáticamente</p>
+      </div>
+      <div class="pago-box">
+  <h3>Método de pago</h3>
+
+  <div class="metodos-pago">
+    <label>
+      <input type="radio" name="metodoPago" value="Tarjeta" checked>
+      💳 Tarjeta
+    </label>
+
+    <label>
+      <input type="radio" name="metodoPago" value="Transferencia">
+      🏦 Transferencia
+    </label>
+
+    <label>
+      <input type="radio" name="metodoPago" value="Pago contra entrega">
+      📦 Pago contra entrega
+    </label>
+  </div>
+
+  <div class="tarjeta-box">
+    <input type="text" id="nombreTarjeta" placeholder="Nombre en la tarjeta">
+    <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta">
+    <input type="text" id="vencimientoTarjeta" placeholder="MM/AA">
+    <input type="text" id="cvvTarjeta" placeholder="CVV">
+  </div>
+</div>
+    </section>
+
+  </main>
+
+  <footer>
+    <h2>Ferremarket</h2>
+    <p>Tu ferretería en línea de confianza.</p>
+    <p>Proyecto Final - Base de Datos II</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
